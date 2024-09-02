@@ -1,0 +1,155 @@
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.signup-page .left-side {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../../Assets/SignUpBackground.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.signup-page .overlay-logo {
+  margin-top: 60px;
+  margin-left: 100px;
+  max-width: 300px;
+}
+
+.signup-page .overlay-text {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: #2a2b77;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 100px;
+  max-width: 500px;
+}
+
+.signup-page .overlay-image {
+  margin-top: 40px;
+  margin-left: 100px;
+  max-width: 500px;
+}
+
+.signup-page .right-side {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-page .form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 400px;
+}
+
+.signup-page .input-container {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.signup-page .input-container label {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  margin-bottom: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #303030;
+}
+
+.signup-page .input {
+  margin-bottom: 16px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #aaaaaa;
+  border-radius: 20px;
+}
+
+.signup-page .button-signup {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 10px;
+  font-size: 16px;
+  background: #696cff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.signup-page .button-login {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 10px;
+  font-size: 16px;
+  background: white;
+  color: black;
+  border-color: #696cff;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.signup-page .forget-password {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: underline;
+  color: #303030;
+}
+
+.signup-page .signin-text {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.signup-page .text-1 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333333;
+}
+
+.signup-page .text-2 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.signup-page .text-2 p {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  position: relative;
+  display: inline-block;
+  padding: 0 20px;
+  color: #303030;
+}
+
+.signup-page .text-2 p:before,
+.signup-page .text-2 p:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background-color: #666666;
+  width: calc(50% - 15px);
+}
+
+.signup-page .text-2 p:before {
+  left: 0;
+  transform: translate(-100%, -50%);
+}
+
+.signup-page .text-2 p:after {
+  right: 0;
+  transform: translate(100%, -50%);
+}

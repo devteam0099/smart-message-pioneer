@@ -1,0 +1,65 @@
+.account-manage-upsert-container .device-type-wrapper .custom-radio {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #696cff;
+  position: relative;
+}
+
+.account-manage-upsert-container
+  .device-type-wrapper
+  input[type="radio"]:checked
+  + .custom-radio {
+  background-color: white;
+  border-color: #696cff;
+}
+
+.account-manage-upsert-container
+  .device-type-wrapper
+  input[type="radio"]:checked
+  + .custom-radio::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: #696cff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.account-assign-upsert-container .search-icon-wrap svg {
+  height: 20px !important;
+  width: 20px !important;
+}
+/* .card-container {
+    transition: border-color 0.3s;
+  }
+  
+  .card-container:hover {
+    border-color: #696CFF; 
+  } */
+/* Custom CSS for the status indicator */
+.status-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-indicator::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.status-online::before {
+  background-color: green;
+}
+
+.status-offline::before {
+  background-color: red;
+}

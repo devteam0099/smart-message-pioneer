@@ -1,0 +1,92 @@
+.custom-dropdown {
+  position: relative;
+  width: 436px;
+  height: auto; 
+  padding: 2rem 0;
+}
+
+.dropdown-header {
+  background-color: #fff;
+  border: 1.5px solid #DDDDF6;
+  border-radius: 8px;
+  padding: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.dropdown-header:hover {
+  border-color: #888;
+}
+
+.dropdown-arrow {
+  /* position: absolute;
+    right: 18px;
+    top: 43px; */
+  border: solid #818183;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 4px;
+  transform: rotate(45deg);
+  transition: transform 0.2s;
+}
+.dropdown-header::before{
+  position: absolute;
+  content: '';
+  width: 42px;
+  height: 42px;
+  border-right: 1.5px solid #DDDDF6;
+  right: 50px;
+}
+.dropdown-arrow.open {
+  transform: rotate(-135deg);
+}
+
+.dropdown-list {
+  position: relative; /* Change to relative to keep it within the popup */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  max-height: 100px; /* Set a max height for the dropdown */
+  overflow-y: auto; /* Add vertical scroll if needed */
+  z-index: 5;
+  list-style: none; 
+  padding: 0;
+  margin: 0.3rem 0;
+}
+
+.dropdown-item {
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 8px;
+  margin: 0.3rem;
+}
+
+.dropdown-item:hover {
+  background-color: #ECEDFF;
+}
+
+/* Custom Scrollbar for WebKit Browsers */
+.dropdown-list::-webkit-scrollbar {
+  width: 6px !important; 
+  border-radius: 8px !important;
+}
+
+.dropdown-list::-webkit-scrollbar-track {
+  background: #f1f1f1 !important; /* Background of the scrollbar track */
+  border-radius: 10px !important; /* Optional: Rounded corners */
+}
+
+.dropdown-list::-webkit-scrollbar-thumb {
+  background-color: #888 !important; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Optional: Rounded corners */
+  border: 2px solid #f1f1f1 !important; /* Optional: Add some padding */
+}
+
+.dropdown-list::-webkit-scrollbar-thumb:hover {
+  background-color: #555 !important; /* Change color on hover */
+}
+

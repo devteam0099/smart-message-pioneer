@@ -1,0 +1,13 @@
+.onlineTag {
+  position: absolute;
+  bottom: 18px;
+  left: 45px;
+  left: 10;
+  border: 2px solid white;
+}
+.sendMessagebtn {
+  position: absolute;
+  right: 22px;
+  bottom: 22px;
+  margin-bottom: 1.01px;
+}

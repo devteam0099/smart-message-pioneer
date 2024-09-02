@@ -1,0 +1,148 @@
+.container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.login-page .left-side {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../../Assets/SignUpBackground.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.login-page .overlay-logo {
+  margin-top: 60px;
+  margin-left: 100px;
+  max-width: 300px;
+}
+
+.login-page .overlay-text {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: #2a2b77;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 100px;
+  max-width: 500px;
+}
+
+.login-page .overlay-image {
+  margin-top: 40px;
+  margin-left: 100px;
+  max-width: 500px;
+}
+
+.login-page .right-side {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-page .form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 400px;
+}
+
+.login-page .input-container {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-page .input-container label {
+  margin-bottom: 4px;
+  font-size: 14px;
+  color: #333;
+}
+
+.login-page .input {
+  margin-bottom: 16px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #aaaaaa;
+  border-radius: 20px;
+}
+
+.login-page .button-signup {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 10px;
+  font-size: 16px;
+  background: #696cff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.login-page .button-login {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 10px;
+  font-size: 16px;
+  background: white;
+  color: black;
+  border-color: #696cff;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.login-page .forget-password {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: underline;
+  margin-top: 20px;
+  color: #303030;
+}
+
+.login-page .login-text {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.login-page .text-1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.login-page .text-1 p {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  position: relative;
+  display: inline-block;
+  padding: 0 10px;
+  color: #303030;
+}
+
+.login-page .text-1 p:before,
+.login-page .text-1 p:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background-color: #666666;
+  width: calc(50% - 25px);
+}
+
+.login-page .text-1 p:before {
+  left: 0;
+  transform: translate(-100%, -50%);
+}
+
+.login-page .text-1 p:after {
+  right: 0;
+  transform: translate(100%, -50%);
+}

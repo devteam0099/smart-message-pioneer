@@ -1,0 +1,27 @@
+.AccountsSidebarContainer{
+    /* max-height: 774px; */
+    overflow-x: hidden;
+    width: fit-content;
+    overflow-y: auto;
+    border-radius: 12px;
+    z-index: 1;
+
+}
+
+  .accountSearch {
+    background-color: #EFF3FF;
+    padding: 0.8rem !important;
+  }
+  .accountItem {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  
+  

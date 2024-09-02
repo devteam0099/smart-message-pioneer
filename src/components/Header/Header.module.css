@@ -1,0 +1,28 @@
+.statusBtns {
+    display: flex;
+    padding: 2.2px;
+    background: #E6E9F2;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  .activeStatusBtn {
+    border-radius: 6px;
+    position: relative;
+    display: inline-block;
+    width: 81px;
+    color: #14AE5C;
+  }
+  
+  .activeStatusBtn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 7px;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 23px;
+    background-color: #14AE5C;
+  }
+  

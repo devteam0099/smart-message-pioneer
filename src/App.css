@@ -1,0 +1,105 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: #f3f5fb;
+}
+* {
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  /* height: 6px; */
+}
+/* ::-webkit-scrollbar{
+  display: none;
+} */
+.bg-gray-200 {
+  background-color: #e6e9f2 !important;
+}
+.text-gray-500 {
+  color: #949494;
+}
+.bg-blue-100 {
+  background-color: #ecedff !important;
+}
+.bg-blue-500 {
+  background-color: #696cff !important;
+}
+.border-radius-12 {
+  border-radius: 12px;
+}
+.border-radius-10 {
+  border-radius: 10px;
+}
+.border-radius-8 {
+  border-radius: 8px;
+}
+.font-size-10 {
+  font-size: 10px;
+}
+/* / =================== global Buttons style ========================== / */
+.btn-primary {
+  background-color: #696cff;
+  color: #fff;
+  padding: 0.55rem 1.3rem;
+  border: 1px solid #696cff;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.5s;
+}
+.btn-primary:hover {
+  background-color: #fff;
+  color: #696cff;
+  border: 1px solid #696cff;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none !important;
+}
+
+.activeInput:focus {
+  outline: 2px solid #696cff !important;
+  outline-offset: 0px;
+  background-color: #f5f6ff !important;
+  border: none;
+}
+
+.table-list-container .react-tooltip {
+  max-width: 600px !important;
+  word-wrap: break-word !important;
+  z-index: 10 !important;
+  background-color: black !important;
+}
+.help-center-container {
+  /* background: linear-gradient(
+    to bottom,
+    #D3D7FF,
+    #D8DCFF
+  ), url("./Assets/Mask-group.png"); */
+  background: linear-gradient(
+      to bottom,
+      rgba(211, 215, 255, 0.5),
+      rgba(216, 220, 255, 0.5)
+    ),
+    url("./Assets/Mask-group.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+.transform-component-module_content__FBWxo,
+.transform-component-module_wrapper__SPB86,
+.transform-component-module_wrapper__SPB86 img {
+  width: 100% !important;
+  height: 100% !important;
+  cursor: grab !important;
+}
+

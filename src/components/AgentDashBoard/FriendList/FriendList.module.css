@@ -1,0 +1,14 @@
+.subGroupWrapper{
+    border: 1px solid #EAEBF2;
+    border-radius: 8px;
+}
+.subGroupSelect{
+    background: #EEF2FE;
+    color: #818183;
+}
+.addSubGroupbtn{
+    background-color: #EEF2FE;
+}
+.resetGroupbtn{
+    border: 1px solid #EAEBF2;
+}
