@@ -24,6 +24,7 @@ import AdminTicketManagementPage from "./Pages/AdminTicketManagement/AdminTicket
 import AdminProtectedRoute from "./Utils/ProtectedRouting/AdminProtectRoute";
 import AdminUserManagement from "./components/AdminUserManagement/AdminUserManagement";
 import AdminUserManagementPage from "./Pages/AdminUserManagement/AdminUserManagementPage";
+import FaqAdminPage from './Pages/FAQ/FAQAdminPage'
 
 export default function App() {
   return (
@@ -75,6 +76,10 @@ export default function App() {
           <Route
             path="/admin/user-management"
             element={<AdminUserManagementPage />}
+          />
+          <Route
+            path="/admin/FAQS"
+            element={<FaqAdminPage />}
           />
         </Route>
       </Routes>

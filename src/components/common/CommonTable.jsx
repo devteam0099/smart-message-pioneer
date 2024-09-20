@@ -26,8 +26,10 @@ const CommonTable = ({
   module,
   setAssignModal,
   toggleSwitch,
-  setIsActive,
-  isActive,
+  tag,
+  icon,
+  noDataHeading,
+  noDatastatement
 }) => {
   const { t } = useTranslation();
   const [showMoreModal, setShowMoreModal] = useState(
@@ -37,6 +39,7 @@ const CommonTable = ({
   const [videoModal, setVideoModal] = useState(false);
   const [imageSrc, setImageSrc] = useState(null);
 
+
   const handleSelectAll = (e) => {
     if (e?.target?.checked) {
       const allIds = data?.map((row) => row.ID);
@@ -45,7 +48,7 @@ const CommonTable = ({
       setSelectedIds([]);
     }
   };
-
+// adds the single element id if it is not and remove it if it exists
   const handleSelect = (e, id) => {
     if (e?.target?.checked) {
       setSelectedIds((prev) => [...prev, id]);
@@ -57,7 +60,7 @@ const CommonTable = ({
   useEffect(() => {
     setShowMoreModal(Array(data?.length)?.fill(false));
     setSelectedIds([]);
-  }, [selectedType, data]);
+  }, []);
 
   const handleMoreModal = (index) => {
     setShowMoreModal((prev) => {
@@ -67,14 +70,14 @@ const CommonTable = ({
     });
   };
 
-  const handleMoreOptionClick = async (option, rowIndex) => {
+  const handleMoreOptionClick = async (selectedData,option, rowIndex) => {
     const rowId = data[rowIndex]?.ID;
-    if (option === "Delete") {
+    if (option === "Delete" || option === "Edit") {
       if (!rowId) {
         toast.error(`Invalid ${module} ID`);
         return;
       }
-      const res = await handleDelete([rowId]);
+      const res = await handleDelete(selectedData,option,rowId);
       if (res) {
         setShowMoreModal((prev) => {
           const newState = [...prev];
@@ -84,15 +87,14 @@ const CommonTable = ({
       }
     } else if (option === "Assign" || option === "Unassign") {
       setAssignModal && setAssignModal(true);
-      setId(rowId);
-    } else {
-      setId(rowId);
-      setOpenModal(true);
-    }
+      setId(rowId);} else {
+         setId(rowId);
+        setOpenModal(true);
+      } 
     setShowMoreModal(Array(data.length).fill(false));
   };
   return (
-    <div className="overflow-auto mb-[50px] table-list-container text-center common-table-list-container">
+    <div className="overflow-auto mb-[50px] table-list-container text-center common-table-list-container mt-6">
       <table className="w-full rounded-[23px]">
         <thead className="sticky bg-[#F6F6FA] top-0 z-[2] rounded-[23px]">
           <tr className="text-left text-gray-500 text-[14px] border-b border-gray-300 text-center">
@@ -260,7 +262,6 @@ const CommonTable = ({
                             if (row["Role"] === "ADMIN") {
                               return;
                             }
-                            toggleSwitch(row?.ID, !row[header]);
                           }}
                           className={`w-12 h-6 flex items-center rounded-full p-1 transition-colors duration-300 ${
                             row["Role"] === "ADMIN"
@@ -313,6 +314,7 @@ const CommonTable = ({
                                   className="p-2 hover:bg-[#ECEDFF] m-1 text-[14px] rounded-[8px] cursor-pointer"
                                   onClick={() =>
                                     handleMoreOptionClick(
+                                      row,
                                       option.label,
                                       rowIndex
                                     )
@@ -362,14 +364,14 @@ const CommonTable = ({
       {!data?.length > 0 && module !== "Template" && (
         <div className="flex flex-col h-[480px] items-center justify-center gap-[20px]">
           <div>
-            <SvgComponent name={noDataIcon} />
+            <SvgComponent name={icon} />
           </div>
           <div>
-            <h2 className="font-semibold text-xl">{t(module)} {t("Management")}</h2>
+            <h2 className="font-semibold text-xl">{t(module)} {t(noDataHeading)}</h2>
           </div>
           <div>
             <p className="text-[#687779] text-sm">
-              {t("Get started by Creating an")} {t(module)}.
+              {t(noDatastatement)} {t(module)}.
             </p>
           </div>
         </div>

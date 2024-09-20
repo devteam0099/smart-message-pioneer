@@ -3,6 +3,7 @@ import SvgComponent from "../SvgComponent/SvgComponent";
 import { toast } from "react-toastify";
 import { TagTypes } from "../../Utils/templateTypeEnum";
 import { useTranslation } from "react-i18next";
+import { useFollowerContext } from "../../Utils/Context/Context.js";
 
 const MaterialTagsUpsert = ({
   selectedType,
@@ -16,6 +17,7 @@ const MaterialTagsUpsert = ({
   const { t } = useTranslation();
   const [tagName, setTagName] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const {fetchFriendsGroup,setFetchFriendsGroup} = useFollowerContext()
 
   const onClose = () => {
     setOpenModal(false);
@@ -84,6 +86,7 @@ const MaterialTagsUpsert = ({
       });
       const data = await response.json();
       if (data?.code === 200 || data?.code === 1000) {
+        setFetchFriendsGroup(!fetchFriendsGroup)
         toast.success(
           t(`Material tag ${tagId ? "updated" : "created"} successfully`)
         );

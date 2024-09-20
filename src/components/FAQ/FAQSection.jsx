@@ -6,7 +6,7 @@ import BreadCrumbs from "../common/BreadCrumbs";
 const FAQSection = () => {
   const [selectedCategory, setSelectedCategory] = useState("General Queries");
   const [expandedQuestion, setExpandedQuestion] = useState(null);
-  const breadcrumbItems = ["User", "FAQ"];
+  const breadcrumbItems = ["user", "FAQ"];
   const handleQuestionClick = (index) => {
     setExpandedQuestion(expandedQuestion === index ? null : index);
   };

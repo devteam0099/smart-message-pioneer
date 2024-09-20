@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 
 const Pagination = ({ currentPage, totalPages, onPageChange, entriesPerPage, onEntriesChange, setCurrentPage }) => {
   const [visiblePages, setVisiblePages] = useState([]);
-
   useEffect(() => {
     updateVisiblePages(currentPage);
   }, [currentPage, totalPages]);

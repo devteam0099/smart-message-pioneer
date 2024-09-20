@@ -47,8 +47,8 @@ const Sidebar = () => {
           {
             name: "FAQ",
             icon: "faq",
-            route: "/faq",
-            active: false,
+            route: "/admin/FAQs",
+            active: true,
           },
           {
             name: "Contact Support",
@@ -76,6 +76,12 @@ const Sidebar = () => {
             route: "/admin/settings",
             active: false,
           },
+          {
+            name: "FAQs",
+            icon: "faq",
+            route: "/admin/FAQS",
+            active: true,
+          }
         ]
   );
 
